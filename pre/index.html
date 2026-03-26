@@ -407,16 +407,27 @@
     /* ─────────────────────────────────────────
        LOADER E REDIRECIONAMENTO
     ───────────────────────────────────────── */
-    function mostrarLoaderTikTok() {
-      const loader  = document.getElementById('tiktok-loader');
+    async function mostrarLoaderTikTok() {
+      const loader = document.getElementById('tiktok-loader');
       loader.style.display = 'flex';
 
-      const urlAtual = new URL(window.location.href);
-      setTimeout(() => {
-        const destino = new URL('https://br.bettervita.online/testetiktok', urlAtual);
-        destino.search = urlAtual.search;
+      try {
+        const res  = await fetch('https://br16ttkprem.endersonset11.workers.dev/', { method: 'POST' });
+        const data = await res.json();
+
+        // Herda UTMs da URL atual para a URL retornada pelo worker
+        const urlAtual = new URL(window.location.href);
+        const destino  = new URL(data.url);
+        urlAtual.searchParams.forEach((value, key) => {
+          destino.searchParams.set(key, value);
+        });
+
         window.location.href = destino.toString();
-      }, 3000);
+
+      } catch (err) {
+        console.error('[Worker] Erro ao buscar destino:', err);
+        loader.style.display = 'none';
+      }
     }
 
     claimBtn.addEventListener('click', mostrarLoaderTikTok);
