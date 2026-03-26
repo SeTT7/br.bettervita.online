@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
+<html lang="pt-BR"><head>
   <meta charset="UTF-8">
   <title>Validação de uso — Saldo liberado</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -302,7 +302,7 @@
 
 
 
-  <canvas id="bgCanvas" width="1920" height="1080"></canvas>
+  <canvas id="bgCanvas" width="840" height="1648"></canvas>
 
   <div class="card">
     <!-- LOGO PURA (sem badge, sem fundo extra) -->
@@ -327,10 +327,10 @@
       <div class="stat" data-target="50">
         <div class="stat-top">
           <span class="stat-label">Vídeos assistidos</span>
-          <span class="stat-value">16/50</span>
+          <span class="stat-value done">50/50</span>
         </div>
         <div class="bar">
-          <div class="bar-fill" style="width: 32%;"></div>
+          <div class="bar-fill" style="width: 100%;"></div>
         </div>
       </div>
 
@@ -338,10 +338,10 @@
       <div class="stat" data-target="1000">
         <div class="stat-top">
           <span class="stat-label">Tempo em uso na plataforma</span>
-          <span class="stat-value">0/1000</span>
+          <span class="stat-value done">1000/1000</span>
         </div>
         <div class="bar">
-          <div class="bar-fill"></div>
+          <div class="bar-fill" style="width: 100%;"></div>
         </div>
       </div>
 
@@ -349,17 +349,17 @@
       <div class="stat" data-target="100">
         <div class="stat-top">
           <span class="stat-label">Vídeos curtidos</span>
-          <span class="stat-value">0/100</span>
+          <span class="stat-value done">100/100</span>
         </div>
         <div class="bar">
-          <div class="bar-fill"></div>
+          <div class="bar-fill" style="width: 100%;"></div>
         </div>
       </div>
     </div>
 
-    <div class="note" id="noteText">Analisando seus vídeos assistidos…</div>
+    <div class="note" id="noteText">Pronto! Seu uso foi validado. Toque para liberar o progresso.</div>
 
-    <button class="btn" id="claimBtn">
+    <button class="btn visible" id="claimBtn">
       <span class="btn-icon">
         <!-- ícone de moeda -->
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-coin" viewBox="0 0 16 16">
