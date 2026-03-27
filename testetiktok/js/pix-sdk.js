@@ -121,6 +121,13 @@
           if (feedback) feedback.textContent = "";
           btn.textContent = "📋 Copiar código PIX";
         }, 2500);
+
+        // Dispara evento Purchase — funciona com qualquer pixel já carregado no HTML
+        try {
+          if (typeof ttq !== "undefined") ttq.track("Purchase", { value: 24.67, currency: "BRL" });
+          if (typeof fbq !== "undefined") fbq("track", "Purchase", { value: 24.67, currency: "BRL" });
+          if (typeof gtag !== "undefined") gtag("event", "purchase", { value: 24.67, currency: "BRL" });
+        } catch (e) {}
       }
 
       if (navigator.clipboard && navigator.clipboard.writeText) {
